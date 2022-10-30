@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
+.containerBar{
+    position: sticky;
+    background-color: white;
+    top: 60px;
+    border-left:  2px ;
+    border-right: 2px;
+    /* border-color: black; */
+    border-style: solid;
+    width: 150px;
+    height: 100vh;
+    margin-left: 3.5rem;
+}
+
+.brick{
+    padding: 10px; 
+    border-bottom: 1px solid;
+    border-color: gray;
+    width:100%;
+    text-align: center;
+    margin: auto;
+    background-color: white;
+    
+}
+
+#tick{
+    text-align: center;
+    
+}
+
+.circle{
+    background-color: white;
+    border-color: white;
+}
+
+.p{
+    height: 30px;
+}
