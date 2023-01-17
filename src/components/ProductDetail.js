@@ -16,6 +16,7 @@ function ProductDetail() {
         dispatch(selectedProduct(response.data))
     })}
 
+    console.log(typeof(price))
   return (
     <div className="details">
       <div>

@@ -3,16 +3,18 @@
 }
 
 .containerBar{
-    position: sticky;
+    position: fixed;
     background-color: white;
     top: 60px;
-    border-left:  2px ;
-    border-right: 2px;
-    /* border-color: black; */
+    border-left:  3px ;
+    border-right: 3px;
+    border: 1.5px solid black;
+    border-radius: 5px;
     border-style: solid;
-    width: 150px;
+    width: 15vw;
     height: 100vh;
     margin-left: 3.5rem;
+    margin-top: 3.2rem;
 }
 
 .brick{
@@ -22,8 +24,22 @@
     width:100%;
     text-align: center;
     margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     background-color: white;
-    
+    cursor: pointer;
+}
+
+button{
+    border:none
+}
+
+.brick:hover{
+    background-color: blanchedalmond;
+}
+
+.circle:hover {
+    background-color: blanchedalmond;
 }
 
 #tick{

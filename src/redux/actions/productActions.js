@@ -44,10 +44,33 @@ export const jeweleryProduct = (products)=> {
   }
 }
 
+export const ratingProduct= (index)=>{
+  return {
+    type: ActionTypes.SETECT_RATING,
+    payload: index+1,
+  }
+}
+
+export const priceFilter1 = ()=>{
+return{
+  type:ActionTypes.PRICE_LOW_TO_HIGH,
+  // payload: item
+}
+}
+
+export const priceFilter2 = ()=>{
+return{
+  type:ActionTypes.PRICE_HIGH_TO_LOW,
+  // payload: item
+}
+}
+
+
 export const addToCart=(items)=>{
   return{
     type: ActionTypes.ADD_TO_CART,
-    payload:items
+    payload:items,
+    
   }
 }
 
@@ -58,3 +81,26 @@ export const RemoveFromCart=(items)=>{
     payload:items
   }
 }
+
+export const alterQyt=(item)=>{
+  return{
+    type: ActionTypes.CHANGE_QYT,
+    payload:item
+  }
+}
+
+export const increaseQtyAction=(item)=>{
+  return{
+    type: ActionTypes.INCREASE_QYT,
+    payload:item
+  }
+}
+
+export const decreaseQtyAction=(item)=>{
+  return{
+    type: ActionTypes.DECREASE_QYT,
+    payload:item
+  }
+}
+
+

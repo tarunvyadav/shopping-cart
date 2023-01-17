@@ -1,40 +1,90 @@
-*{
-    box-sizing: border-box;
+.Home{
+    background-color: white;
 }
 
+
+
 .productCard{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem
-    
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem 7rem;
+    margin-top: 4rem;
+    background-color: white;
 }
 
 .outerSquare{
-    
-    height: 350px;
-    width: 250px;
-    margin-left: 50px;
-    margin-top: 20px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+}
+
+.add{
+    background-color: green;
+    padding:5px;
+    margin: 1rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.remove{
+    background-color: brown;
+    padding: 5px;
+    margin: 1rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+img{
+    width:200px;
+    height:200px;
+    margin-left:50px
 }
 
 .middleSquare{
-    height: 200px;
-    width: 200px;
-    
+    margin: 1rem;
 }
 
-.innerSquare{
-    height: 200px;
-     width: 200px;
+.middleSquare>.text{
+    display:flex;
+    flex-direction: column;
+    width: 300px;
+    font-weight: 200;
+    font-size: small;
+    padding:0px;
+   align-items: flex-start;
+   margin-top:1rem;
+  
+    }
+
+
+
+.show{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.middleSquare>.text>.category{
+    font-weight: 500;
+    color: orangered;
+   
+}
+
+.middleSquare>.text>.title {
+    color: blue;
+    font-weight: 400;
 
 }
 
-img{
-    height: 150px;
-    width: 150px;
-    
+
+.add:hover{
+    background-color: greenyellow;
 }
 
-.text{
-    text-align: center;
+.remove:hover {
+    background-color: red;
 }
+

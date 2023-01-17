@@ -1,18 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../style/SideBar.css';
-import StarBorderIcon from '@mui/icons-material/StarBorder';
+// import StarBorderIcon from '@mui/icons-material/StarBorder';
 import axios from "axios";
 import { useSelector,useDispatch } from 'react-redux';
-import {jeweleryProduct,menProduct,womenProduct,electronicsProduct,setProducts} from '../redux/actions/productActions'
+import {jeweleryProduct,menProduct,womenProduct,electronicsProduct,setProducts,ratingProduct,priceFilter1,priceFilter2} from '../redux/actions/productActions'
+// import { Rating } from '@mui/material';
+import Rating  from './Rating'
 
 
 
 
 function SideBar() {
-
+  //  const [rate,setRate]= useState(3)
    const products = useSelector((state)=>state);
    const dispatch = useDispatch()
-
+  
    
      const fetchProducts = async () => {
     const response = await axios
@@ -55,6 +57,21 @@ function SideBar() {
     dispatch(electronicsProduct(response.data))
   }
 
+  console.log(products)
+  
+ const radioFunc1= ()=>{
+       return dispatch(priceFilter1());
+  }
+
+
+ const radioFunc2= ()=>{
+       return dispatch(priceFilter2())
+  }
+
+ const ratingDispatch=()=>{
+       return dispatch(ratingProduct())
+ }
+  
 
   return (<>
     <div className='containerBar'>
@@ -76,23 +93,17 @@ function SideBar() {
     <div  className='brick' id="tick" >
       Price
       <div className="circle">
-         <input type='radio' id='1' value="1" name="price"  ></input>
-          <label for="1">0-$100</label>
+         <input type='radio' id='1' value="ASC" name="price" onClick={radioFunc1}  ></input>
+          <label for="1">Low-High</label>
       
-        <input type='radio' id='2' value="2" name="price" ></input>
-          <label for="2">$100-$200</label>
+        <input type='radio' id='2' value="DSC" name="price"  onClick={radioFunc2} ></input>
+          <label for="2">High-Low</label>
       </div>
     </div>
-    <div  className='brick' >
-      Rating
-      <div className='p' >
-      {[...Array(5)].map(( _,i)=>{
-        return(<span key={i}><StarBorderIcon/></span>)})}
-     
-      </div>
-      
-    </div>
-
+ 
+    <button  className='brick' onClick={fetchProducts}>
+      No Filter
+    </button>
     </div>
   </>
     
