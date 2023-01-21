@@ -1,0 +1,28 @@
+.Home {
+    display: flex;
+    flex-direction: row;
+    background-color:white
+}
+
+.MenuIcon {
+
+    visibility: hidden;
+    position: fixed;
+    margin-top: 50px;
+    left: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+
+    .middleSquare {
+        margin: 0.5rem;
+    }
+
+    .MenuIcon {
+        position: fixed;
+        margin-top: 10vh;
+        left: 2vw;
+        visibility: visible
+    }
+}
