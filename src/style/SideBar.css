@@ -55,3 +55,37 @@ button{
 .p{
     height: 30px;
 }
+
+
+ 
+
+@media (max-width: 1000px) {
+
+    
+
+ .containerBar {
+            transition: all 0.3s linear;;
+            transform: translate(-200%);
+            margin-left: 0rem;
+ }
+
+ .containerBarShow {
+
+    transform: translate(0);
+    z-index: 1;
+    position: fixed;
+    background-color: white;
+    top: 10vh;
+    border-left: 3px;
+    border-right: 3px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    border-style: solid;
+    width: 200px;
+    height: 100vh;
+    margin-left: 2.5rem;
+    margin-top: 3.2rem;
+
+ }
+
+}
