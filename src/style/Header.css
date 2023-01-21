@@ -1,7 +1,5 @@
 *{
     box-sizing: border-box;
-   
-
 }
 
 
@@ -43,7 +41,6 @@ nav{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    /* padding:2vh; */
     text-decoration: none;
     height: 50px;
     width: 50px;
@@ -76,6 +73,5 @@ nav{
     color:rgb(236, 236, 23)
    
 }
-
 
 
