@@ -1,11 +1,9 @@
 
-import './App.css';
+
 import Header from './components/Header';
-import SideBar from './components/SideBar';
-import ProductListing from './components/ProductListing';
 import {BrowserRouter as Router, Route,Routes} from "react-router-dom";
 import ProductDatail from "./components/ProductDetail"
-import ProductCard from './components/ProductCard';
+import Home from './components/Home'
 import Cart from './components/Cart';
 
 
@@ -17,10 +15,7 @@ function App() {
       <Header/>
     
        <Routes>
-        <Route path='/' exact element={<div className="Home">
-      <SideBar/>
-     <ProductListing/>
-     </div>}/>
+        <Route path='/' exact element={<Home/>}/>
         
         <Route path='/product/:productId' exact element={<ProductDatail />}/>
         <Route path='/cart'  element={<Cart/>}/>
@@ -37,3 +32,4 @@ function App() {
 }
 
 export default App;
+
